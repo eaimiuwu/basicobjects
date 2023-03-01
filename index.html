@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book</title>
+</head>
+<body>
+    <h1>The Books I have Read</h1>
+    <p>Title: The Hobbit</p>
+    <p>Author: J.R.R. Tolkien</p>
+    <p>295 pages</p>
+
+    <p>Title: The Genius</p>
+    <p>Author: Gay Hendricks</p>
+    <p>165 pages</p>
+
+    <script>
+
+        function Book(title, author, pages, read) {
+            this.title = title
+            this.author = author
+            this.pages = pages
+            this.read = read
+
+            this.info = function(){
+                var bookInfo = `${title} by ${author} which has ${pages}. Status: ${read}`
+                return(bookInfo)
+            }
+        }
+
+        const theHobbit = new Book ('The Hobbit','J.R.R. Tolkien', '295 pages', 'not read yet')
+        const theGenius = new Book ('The Genius', 'Gay Hendricks', '165 pages', 'read it and loved it')    
+        const bookCollection = [theHobbit, theGenius]
+            
+        document.addEventListener("DOMContentLoaded", (event) => {
+            log.textContent += `DOMContentLoaded\n`;
+        });
+    </script>
+
+    <!-- Create a collection of the books I read (Action Item: look up containers and data structures)
+    theArray = [book 1, book 2, book 3]
+    generate a list using the book function
+    save data 
+    create an array
+    display array in a list -->
+
+   
+    
+</body>
+</html>
